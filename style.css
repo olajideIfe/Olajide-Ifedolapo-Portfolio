@@ -1,0 +1,21 @@
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Typing cursor */
+.cursor {
+  border-right: 2px solid white;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Fade up animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
