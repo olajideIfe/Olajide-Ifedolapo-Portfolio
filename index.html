@@ -1,80 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olajide Ifedolapo Portfolio</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><!-- Font Awesome -->
- <script src="https://kit.fontawesome.com/f9143a9097.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olajide Ifedolapo Portfolio</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://kit.fontawesome.com/f9143a9097.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="bg-gradient-to-b from-[#d7ccc8] to-[#4e342e] text-white font-sans scroll-smooth">
+<canvas id="particles"></canvas>
 
-  <!-- NAVBAR -->
-  <nav class="fixed w-full bg-[#4e342e] bg-opacity-90 backdrop-blur-md z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-      <!-- Logo -->
-      <div class="text-2xl font-bold text-[#fff3e0]">OI</div>
-      <!-- Menu -->
-      <ul class="flex space-x-6">
-        <li><a href="#home" class="hover:underline">Home</a></li>
-        <li><a href="#about" class="hover:underline">About</a></li>
-        <li><a href="#skills" class="hover:underline">Skills</a></li>
-        <li><a href="#projects" class="hover:underline">Projects</a></li>
-        <li><a href="#contact" class="hover:underline">Contact</a></li>
-      </ul>
+<!-- NAV -->
+<nav class="fixed w-full bg-[#3e2723] z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+
+    <!-- LOGO -->
+    <h1 class="font-bold text-lg md:text-2xl">OI</h1>
+
+    <!-- DESKTOP MENU -->
+    <div class="hidden md:flex gap-6">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </div>
-  </nav>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="pt-24 pb-20 px-6 flex flex-col-reverse md:flex-row items-center max-w-6xl mx-auto gap-8">
-    <!-- Text -->
-    <div class="flex-1 fade-up">
-      <h1 class="text-5xl font-bold mb-4">Olajide Ifedolapo Elizabeth</h1>
-      <p class="text-xl mb-6">Frontend Developer | UI/UX Designer</p>
-      <div class="flex space-x-4">
-        <a href="https://github.com/olajideIfe" target="_blank" class="hover:text-yellow-300"><i class="fab fa-github fa-2x"></i></a>
-        <a href="https://www.linkedin.com/in/Ifedolapo Olajide" target="_blank" class="hover:text-blue-500"><i class="fab fa-linkedin fa-2x"></i></a>
-      </div>
+    <!-- HAMBURGER BUTTON -->
+    <div class="md:hidden cursor-pointer" onclick="toggleMenu()">
+      <i class="fas fa-bars text-2xl"></i>
     </div>
-    <!-- Image -->
-    <div class="flex-1 flex justify-center md:justify-end">
-      <img src="./images/Frame 36.png"alt="Olajide Ifedolapo" class="rounded-full w-100 h-100 object-cover shadow-xl">
-    </div>
-  </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="py-20 px-6 bg-[#5d4037] text-white">
-    <div class="max-w-6xl mx-auto fade-up">
-      <h2 class="text-3xl font-bold mb-6">About Me</h2>
-      <p class="mb-4">
-        Hi, I’m <span class="font-semibold">Olajide Ifedolapo Elizabeth</span>, a passionate <span class="font-semibold">frontend developer</span> and experienced <span class="font-semibold">UI/UX designer</span>. I love turning ideas into beautiful, functional, and responsive web pages using HTML, CSS, JavaScript, and Tailwind CSS.
-      </p>
-      <p class="mb-4">
-        I have a strong foundation in design, having worked with Figma and prototyping before learning frontend development. My projects, including personalized pages and responsive clones, showcase my attention to detail, clean code, and commitment to creating engaging user experiences.
-      </p>
-      <p class="mb-4">
-        I enjoy crafting intuitive interfaces, experimenting with layouts, colors, and animations, and continuously improving my skills. My goal is to deliver websites that are not just visually appealing but also functional and user-friendly.
-      </p>
-      <div class="mt-6 flex flex-wrap gap-4">
-        <span class="bg-[#3e2723] px-4 py-2 rounded">HTML</span>
-        <span class="bg-[#3e2723] px-4 py-2 rounded">CSS</span>
-        <span class="bg-[#3e2723] px-4 py-2 rounded">JavaScript</span>
-        <span class="bg-[#3e2723] px-4 py-2 rounded">Tailwind CSS</span>
-        <span class="bg-[#3e2723] px-4 py-2 rounded">Figma</span>
-        <span class="bg-[#3e2723] px-4 py-2 rounded">Prototyping</span>
-        <span class="bg-[#3e2723] px-4 py-2 rounded">UI/UX Design</span>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <!-- SKILLS SECTION -->
-  <section id="skills" class="py-20 bg-[#4e342e] px-6 text-white">
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden flex flex-col items-center bg-[#3e2723] py-4 space-y-4 md:hidden">
+    <a href="#home" class="nav-link" onclick="toggleMenu()">Home</a>
+    <a href="#about" class="nav-link" onclick="toggleMenu()">About</a>
+    <a href="#skills" class="nav-link" onclick="toggleMenu()">Skills</a>
+    <a href="#projects" class="nav-link" onclick="toggleMenu()">Projects</a>
+    <a href="#contact" class="nav-link" onclick="toggleMenu()">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="pt-24 pb-20 px-4 flex flex-col-reverse md:flex-row items-center max-w-6xl mx-auto gap-8 ">
+<div class="flex-1 slide-in space-y-4">
+
+<h1 class="text-5xl md:text-6xl font-bold leading-tight">
+  Olajide Ifedolapo
+</h1>
+
+<p class="text-yellow-300 text-lg md:text-xl font-medium">
+  Frontend Developer • UI/UX Designer • Aspiring Full-Stack Developer
+</p>
+
+<p class="text-gray-200 max-w-md">
+  I design and build user-focused, responsive websites combining creativity, clean code, and problem-solving.
+</p>
+
+<!-- CONTACT -->
+<div class="space-y-1">
+  <p>📞 <a href="tel:+2348137887949" class="hover:text-yellow-300">+234 8137887949</a></p>
+  <p>📧 <a href="mailto:olajideifedolapo1@gmail.com" class="hover:text-yellow-300">olajideifedolapo1@gmail.com</a></p>
+</div>
+
+<!-- SOCIALS -->
+<div class="flex gap-6 mt-4 text-2xl">
+  <a href="https://github.com/olajideIfe" target="_blank"
+     class="text-gray-400 hover:text-white transition">
+     <i class="fab fa-github"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/in/ifedolapo-olajide-09aa0738b" target="_blank"
+     class="text-gray-400 hover:text-[#0077b5] transition">
+     <i class="fab fa-linkedin"></i>
+  </a>
+</div>
+
+</div>
+
+<img src="./images/Frame 36.png"
+class="w-72 h-72 rounded-full object-cover border-yellow-400 shadow-[0_10px_40px_rgba(250,204,21,0.4)] bounce">
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 px-6 bg-[#5d4037]">
+<div class="max-w-6xl mx-auto fade-up transition duration-500 hover:shadow-[0_10px_40px_rgba(250,204,21,0.6)] 
+hover:scale-[1.01] active:shadow-[0_10px_40px_rgba(250,204,21,0.9)] rounded-xl p-4">
+
+<h2 class="text-3xl font-bold mb-6">About Me</h2>
+<p class="mb-4">
+I’m a Frontend Developer and UI/UX Designer focused on building clean, responsive, and user-friendly interfaces.
+</p>
+
+<p class="mb-4">
+I have a first-class degree in Botany and a research background that strengthens my problem-solving and attention to detail.
+</p>
+
+<p>
+Currently learning full-stack development and open to internships and junior roles.
+</p>
+</div>
+</section>
+
+<!-- SKILLS -->
+ <section id="skills" class="py-20 bg-[#4e342e] px-6 text-white">
     <div class="max-w-6xl mx-auto fade-up">
       <h2 class="text-3xl font-bold mb-10">Skills</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Frontend Development -->
-        <div class="bg-[#3e2723] p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+        <div class="bg-[#3e2723] p-6 rounded-xl transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(250,204,21,0.6)]">
           <h3 class="text-xl font-bold mb-4">Frontend Development</h3>
           <div class="flex flex-col gap-2">
             <div><span class="font-semibold">HTML</span>
@@ -92,7 +131,7 @@
           </div>
         </div>
         <!-- UI/UX & Design -->
-        <div class="bg-[#3e2723] p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+        <div class="bg-[#3e2723] p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-[0_0_25px_rgba(250,204,21,0.6)] transition duration-300">
           <h3 class="text-xl font-bold mb-4">UI/UX & Design</h3>
           <div class="flex flex-col gap-2">
             <div><span class="font-semibold">Figma</span>
@@ -107,7 +146,7 @@
           </div>
         </div>
         <!-- Other Skills -->
-        <div class="bg-[#3e2723] p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+        <div class="bg-[#3e2723] p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-[0_0_25px_rgba(250,204,21,0.6)] transition duration-300">
           <h3 class="text-xl font-bold mb-4">Other Skills</h3>
           <div class="flex flex-col gap-2">
             <span class="inline-block bg-[#5d4037] px-4 py-2 rounded-full">Responsive Design</span>
@@ -121,12 +160,12 @@
   </section>
 
   <!-- PROJECTS SECTION -->
-  <section id="projects" class="py-20 bg-[#4e342e] px-6">
+  <section id="projects" class="py-20 bg-[#5d4037] px-6">
     <div class="max-w-6xl mx-auto fade-up">
       <h2 class="text-3xl font-bold mb-10 text-white">Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
        
-        <!-- Project 2 -->
+        <!-- Project 1 -->
         <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('clone')">
           <img src="./images/newshomepage project.png" alt="Frontend Mentor Clone" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
           <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
@@ -134,7 +173,7 @@
             <p class="text-sm mb-3">Responsive landing page clone improved with custom styles.</p>
           </div>
         </div>
-        <!-- Project 3 -->
+        <!-- Project 2 -->
         <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('todo')">
           <img src="./images/product preview card project.png" alt="product preview card" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
           <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
@@ -142,7 +181,7 @@
             <p class="text-sm mb-3">Design for a perfume brand.</p>
           </div>
         </div>
-        <!-- Project 4 -->
+        <!-- Project 3 -->
         <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('landing')">
           <img src="./images/snapproject.png" alt="Mini Landing Page" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
           <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
@@ -150,69 +189,146 @@
             <p class="text-sm mb-3">Responsive landing page built with Tailwind CSS.</p>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Project Modals -->
+        <!-- Project 4 -->
+         <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('grading')">
+  <img src="./images/grading-sheet.png" alt="Grading System" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+  
+  <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
+    <h3 class="text-xl font-bold mb-2">Grading System</h3>
+    <p class="text-sm mb-3">Automated grading system that calculates scores and assigns grades.</p>
+  </div>
+</div>
+
+        <!-- Project 5 -->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('counter')">
+          <img src="./images/counter-app.png" alt="Counter App" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+  
+        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
+       <h3 class="text-xl font-bold mb-2">Counter App</h3>
+       <p class="text-sm mb-3">Interactive counter with increment, decrement, and reset functionality.</p>
+     </div>
+     </div>
+  </div>
+  </div>
+
+</section>
+
+<!-- Project Modals -->
     <!-- Clone Modal -->
-    <div id="modal-clone" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6">
-      <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black">
+    <div id="modal-clone" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
+      <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black overflow-y-auto">
         <button onclick="closeModal('clone')" class="absolute top-2 right-2 text-black font-bold text-xl">X</button>
         <h2 class="text-2xl font-bold mb-4">Frontend Mentor Clone</h2>
         <p class="mb-4">Responsive landing page clone from Frontend Mentor, with custom design and interactivity.</p>
         <img src="./images/newshomepage project.png" class="w-full rounded mb-4">
         <div class="flex gap-4">
-          <a href="https://github.com/olajideIfe/News-Homepage" target="_blank" class="bg-black text-white px-4 py-2 rounded">Code</a>
-          <a href="https://YOURUSERNAME.github.io/News-Homepage" target="_blank" class="bg-black text-white px-4 py-2 rounded">Live</a>
+          <a href="https://github.com/olajideIfe/News-Homepage" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Code</a>
+          <a href="https://olajideIfe.github.io/News-Homepage" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Live</a>
         </div>
       </div>
     </div>
 
-    <!-- To-do Modal -->
-    <div id="modal-todo" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6">
-      <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black">
+    <!-- Product preview Modal -->
+    <div id="modal-todo" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
+      <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black overflow-y-auto">
         <button onclick="closeModal('todo')" class="absolute top-2 right-2 text-black font-bold text-xl">X</button>
         <h2 class="text-2xl font-bold mb-4">Product-preview-card-component</h2>
         <img src="./images/product preview card project.png" class="w-full rounded mb-4">
         <div class="flex gap-4">
-          <a href="https://github.com/olajideIfe/Product-preview-card-component" target="_blank" class="bg-black text-white px-4 py-2 rounded">Code</a>
-          <a href="https://olajideife.github.io/Product-preview-card-component/" target="_blank" class="bg-black text-white px-4 py-2 rounded">Live</a>
+          <a href="https://github.com/olajideIfe/Product-preview-card-component" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Code</a>
+          <a href="https://olajideife.github.io/Product-preview-card-component/" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Live</a>
         </div>
       </div>
     </div>
 
     <!-- Landing Modal -->
-    <div id="modal-landing" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6">
-      <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black">
+    <div id="modal-landing" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
+      <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black overflow-y-auto">
         <button onclick="closeModal('landing')" class="absolute top-2 right-2 text-black font-bold text-xl">X</button>
         <h2 class="text-2xl font-bold mb-4">Mini Landing Page</h2>
         <p class="mb-4">A responsive landing page built with Tailwind CSS, featuring hero, features, and gallery sections.</p>
         <img src="./images/snapproject.png" class="w-full rounded mb-4">
         <div class="flex gap-4">
-          <a href="https://github.com/olajideIfe/Snap" target="_blank" class="bg-black text-white px-4 py-2 rounded">Code</a>
-          <a href="https://YOURUSERNAME.github.io/Snap" target="_blank" class="bg-black text-white px-4 py-2 rounded">Live</a>
+          <a href="https://github.com/olajideIfe/Snap" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Code</a>
+          <a href="https://olajideIfe.github.io/Snap" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Live</a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="py-20 px-6 bg-[#5d4037] text-white">
-    <div class="max-w-4xl mx-auto fade-up">
-      <h2 class="text-3xl font-bold mb-6">Let's Work Together</h2>
-      <form action="mailto:olajideifedolapo1@gmail.com" method="POST" class="flex flex-col gap-4">
-        <input type="text" name="name" placeholder="Your Name" class="p-3 rounded bg-[#4e342e] border border-[#fff3e0]" required>
-        <input type="email" name="email" placeholder="Your Email" class="p-3 rounded bg-[#4e342e] border border-[#fff3e0]" required>
-        <textarea name="message" placeholder="Your Message" rows="5" class="p-3 rounded bg-[#4e342e] border border-[#fff3e0]" required></textarea>
-        <button type="submit" class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-3 rounded">Send Message</button>
-      </form>
+    <!-- Grading system Modal -->
+     <div id="modal-grading" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
+  <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black max-h-[50vh]overflow-y-auto">
+
+    <button onclick="closeModal('grading')" class="absolute top-2 right-2 font-bold text-xl">X</button>
+
+    <h2 class="text-2xl font-bold mb-4">Grading System</h2>
+
+    <p class="mb-4">
+      A grading system that takes user input and calculates results based on defined grading logic, providing instant feedback.
+    </p>
+
+    <img src="./images/grading-sheet.png" class="w-full rounded mb-4">
+
+    <div class="flex gap-4">
+      <a href="https://github.com/olajideIfe/Grading-System" target="_blank"
+        class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">
+        Code
+      </a>
+
+      <a href="https://olajideIfe.github.io/Grading-System" target="_blank"
+        class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">
+        Live
+      </a>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="py-6 bg-[#3e2723] text-center text-white">
-    © 2026 Olajide Ifedolapo Elizabeth. All rights reserved.
-  </footer>
+  </div>
+</div>
+
+<!-- Counter app Modal -->
+    <div id="modal-counter" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
+  <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black overflow-y-auto">
+    <button onclick="closeModal('counter')" class="absolute top-2 right-2 font-bold text-xl">X</button>
+    <h2 class="text-2xl font-bold mb-4">Counter App</h2>
+    <p class="mb-4">
+      A simple and interactive counter application built with JavaScript, allowing users to increase, decrease, and reset values dynamically.
+    </p>
+    <img src="./images/counter-app.png" class="w-full rounded mb-4">
+    <div class="flex gap-4">
+      <a href="https://github.com/olajideIfe/Counter-App" target="_blank"
+        class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">
+        Code
+      </a>
+      <a href="https://counter-app-first.vercel.app/" target="_blank"
+        class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black
+        hover:scale-110 transition duration-300">
+        Live
+      </a>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 px-6 bg-[#4e342e]">
+<div class="max-w-6xl mx-auto fade-up transition duration-500 hover:shadow-[0_10px_40px_rgba(250,204,21,0.6)] hover:scale-[1.01] rounded-xl p-4">
+
+<h2 class="text-3xl font-bold mb-6">Let's Work Together</h2>
+
+<form action="mailto:olajideifedolapo1@gmail.com" class="flex flex-col gap-4">
+<input type="text" placeholder="Name" class="p-3 rounded bg-[#4e342e]">
+<input type="email" placeholder="Email" class="p-3 rounded bg-[#4e342e]">
+<textarea placeholder="Message" class="p-3 rounded bg-[#4e342e]"></textarea>
+<button class="bg-yellow-500 text-black p-3 rounded">Send</button>
+</form>
+
+</div>
+</section>
+
+<footer class="text-center py-6 bg-[#3e2723]">
+© 2026 Olajide Ifedolapo
+</footer>
 
 <script src="./script.js"></script>
 </body>

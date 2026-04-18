@@ -1,21 +1,68 @@
-/* Smooth scroll */
-html { scroll-behavior: smooth; }
-
-/* Typing cursor */
-.cursor {
-  border-right: 2px solid white;
-  animation: blink 0.7s infinite;
-}
-@keyframes blink {
-  50% { border-color: transparent; }
+/* ================= PARTICLES ================= */
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
 }
 
-/* Fade up animation */
-.fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s forwards;
+/* ================= BASE ================= */
+html{scroll-behavior:smooth;}
+body{
+  background:#4e342e;
+  color:white;
+  margin:0;
 }
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
+
+/* ================= NAV ================= */
+.nav-link{
+  position:relative;
+  padding-bottom:4px;
+  transition:0.3s;
+}
+.nav-link:hover{
+  color:#facc15;
+}
+.nav-link:hover::after,
+.nav-link.active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:2px;
+  background:#facc15;
+}
+.nav-link.active{
+  color:#facc15;
+}
+
+/* ================= ANIMATION ================= */
+.slide-in{
+  opacity:0;
+  transform:translateX(-60px);
+  transition:1s;
+}
+.slide-in.show{
+  opacity:1;
+  transform:translateX(0);
+}
+
+.fade-up{
+  opacity:0;
+  transform:translateY(60px);
+  transition:1s;
+}
+.fade-up.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= BOUNCE ================= */
+.bounce{
+  animation:bounce 3s infinite;
+}
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
 }
