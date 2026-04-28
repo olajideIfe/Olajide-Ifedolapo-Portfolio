@@ -174,7 +174,7 @@ Currently learning full-stack development and open to internships and junior rol
           </div>
         </div>
         <!-- Project 2 -->
-        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('todo')">
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('product')">
           <img src="./images/product preview card project.png" alt="product preview card" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
           <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
             <h3 class="text-xl font-bold mb-2">product preview card</h3>
@@ -200,7 +200,9 @@ Currently learning full-stack development and open to internships and junior rol
   </div>
 </div>
 
-        <!-- Project 5 -->
+<!-- Project 5 (budget app) -->
+
+        <!-- Project 6 -->
         <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('counter')">
           <img src="./images/counter-app.png" alt="Counter App" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
   
@@ -209,6 +211,18 @@ Currently learning full-stack development and open to internships and junior rol
        <p class="text-sm mb-3">Interactive counter with increment, decrement, and reset functionality.</p>
      </div>
      </div>
+
+     <!-- Project 7 -->
+<div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('todo')">
+  <img src="./images/to-do-app.png" alt="To Do App" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+
+  <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
+    <h3 class="text-xl font-bold mb-2">To Do App</h3>
+    <p class="text-sm mb-3">
+      Productivity app with add, edit, delete, and task completion features.
+    </p>
+  </div>
+</div>
   </div>
   </div>
 
@@ -230,9 +244,9 @@ Currently learning full-stack development and open to internships and junior rol
     </div>
 
     <!-- Product preview Modal -->
-    <div id="modal-todo" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
+    <div id="modal-product" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
       <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black overflow-y-auto">
-        <button onclick="closeModal('todo')" class="absolute top-2 right-2 text-black font-bold text-xl">X</button>
+        <button onclick="closeModal('product')" class="absolute top-2 right-2 text-black font-bold text-xl">X</button>
         <h2 class="text-2xl font-bold mb-4">Product-preview-card-component</h2>
         <img src="./images/product preview card project.png" class="w-full rounded mb-4">
         <div class="flex gap-4">
@@ -305,6 +319,43 @@ Currently learning full-stack development and open to internships and junior rol
         Live
       </a>
     </div>
+     </div>
+</div>
+
+
+    <!-- To Do App Modal -->
+<div id="modal-todo" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
+  <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black overflow-y-auto">
+
+    <button onclick="closeModal('todo')" class="absolute top-2 right-2 font-bold text-xl">
+      X
+    </button>
+
+    <h2 class="text-2xl font-bold mb-4">To Do App</h2>
+
+    <p class="mb-4">
+      A modern and interactive To Do application built with React, allowing users to add tasks, edit tasks, remove tasks, and mark tasks as completed dynamically.
+    </p>
+
+    <img src="./images/to-do-app.png" class="w-full rounded mb-4">
+
+    <div class="flex gap-4">
+
+      <a href="https://github.com/olajideIfe/React-To-Do-App" target="_blank"
+        class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">
+        Code
+      </a>
+
+      <a href="https://react-to-do-app-tau-seven.vercel.app/" target="_blank"
+        class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">
+        Live
+      </a>
+
+    </div>
+  </div>
+  </div>
+
+</section>
 
   </div>
 </div>
