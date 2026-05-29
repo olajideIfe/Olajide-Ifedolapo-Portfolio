@@ -208,25 +208,8 @@ class="w-72 h-72 rounded-full object-cover border-4 border-yellow-400 shadow-[0_
     <div class="max-w-6xl mx-auto fade-up">
       <h2 class="text-3xl font-bold mb-10 text-white">Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
-       
+  
         <!-- Project 1 -->
-        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('clone')">
-          <img src="./images/newshomepage project.png" alt="Frontend Mentor Clone" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-          <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
-            <h3 class="text-xl font-bold mb-2">Frontend Mentor Clone</h3>
-            <p class="text-sm mb-3">Responsive landing page clone improved with custom styles.</p>
-          </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('product')">
-          <img src="./images/product preview card project.png" alt="product preview card" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-          <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
-            <h3 class="text-xl font-bold mb-2">Product Preview Card</h3>
-    
-            <p class="text-sm mb-3">Design for a perfume brand.</p>
-          </div>
-        </div>
-        <!-- Project 3 -->
         <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('landing')">
           <img src="./images/snapproject.png" alt="Mini Landing Page" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
           <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
@@ -235,7 +218,7 @@ class="w-72 h-72 rounded-full object-cover border-4 border-yellow-400 shadow-[0_
           </div>
         </div>
 
-        <!-- Project 4 -->
+        <!-- Project 2 -->
          <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('grading')">
   <img src="./images/grading-sheet.png" alt="Grading System" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
   
@@ -245,9 +228,7 @@ class="w-72 h-72 rounded-full object-cover border-4 border-yellow-400 shadow-[0_
   </div>
 </div>
 
-<!-- Project 5 (budget app) -->
-
-        <!-- Project 6 -->
+ <!-- Project 3-->
         <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('counter')">
           <img src="./images/counter-app.png" alt="Counter App" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
   
@@ -257,7 +238,7 @@ class="w-72 h-72 rounded-full object-cover border-4 border-yellow-400 shadow-[0_
      </div>
      </div>
 
-     <!-- Project 7 -->
+     <!-- Project 4 -->
 <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('todo')">
   <img src="./images/to-do-app.png" alt="To Do App" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
 
@@ -268,40 +249,22 @@ class="w-72 h-72 rounded-full object-cover border-4 border-yellow-400 shadow-[0_
     </p>
   </div>
 </div>
+
+ <!-- Project 5 -->
+<div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('shopping')">
+  <img src="./images/shopping-list-app.png" alt="Shopping List App" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+  <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
+    <h3 class="text-xl font-bold mb-2">Shopping List App</h3>
+    <p class="text-sm mb-3">A responsive react shopping list app that allows users to add, edit and delete items.</p>
+  </div>
+</div>
   </div>
   </div>
 
 </section>
 
 <!-- Project Modals -->
-    <!-- Clone Modal -->
-    <div id="modal-clone" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
-      <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black overflow-y-auto">
-        <button onclick="closeModal('clone')" class="absolute top-2 right-2 text-black font-bold text-xl">X</button>
-        <h2 class="text-2xl font-bold mb-4">Frontend Mentor Clone</h2>
-        <p class="mb-4">Responsive landing page clone from Frontend Mentor, with custom design and interactivity.</p>
-        <img src="./images/newshomepage project.png" class="w-full rounded mb-4">
-        <div class="flex gap-4">
-          <a href="https://github.com/olajideIfe/News-Homepage" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Code</a>
-          <a href="https://olajideIfe.github.io/News-Homepage" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Live</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Product preview Modal -->
-    <div id="modal-product" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
-      <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black overflow-y-auto">
-        <button onclick="closeModal('product')" class="absolute top-2 right-2 text-black font-bold text-xl">X</button>
-        <h2 class="text-2xl font-bold mb-4">Product-preview-card-component</h2>
-        <img src="./images/product preview card project.png" class="w-full rounded mb-4">
-        <div class="flex gap-4">
-          <a href="https://github.com/olajideIfe/Product-preview-card-component" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Code</a>
-          <a href="https://olajideife.github.io/Product-preview-card-component/" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Live</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Landing Modal -->
+  <!-- Landing Modal -->
     <div id="modal-landing" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
       <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black overflow-y-auto">
         <button onclick="closeModal('landing')" class="absolute top-2 right-2 text-black font-bold text-xl">X</button>
@@ -399,6 +362,20 @@ class="w-72 h-72 rounded-full object-cover border-4 border-yellow-400 shadow-[0_
     </div>
   </div>
   </div>
+
+   <!-- Shopping List App -->
+    <div id="modal-shopping" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
+      <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black overflow-y-auto">
+        <button onclick="closeModal('shopping')" class="absolute top-2 right-2 text-black font-bold text-xl">X</button>
+        <h2 class="text-2xl font-bold mb-4">Shopping List App</h2>
+        <p class="mb-4">A responsive react shopping list app that allows users to add, edit and delete items.</p>
+        <img src="./images/shopping-list-app.png" class="w-full rounded mb-4">
+        <div class="flex gap-4">
+          <a href="https://github.com/olajideIfe/shopping-list-app target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Code</a>
+          <a href="https://shopping-list-app-cyan-nine.vercel.app/" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Live</a>
+        </div>
+      </div>
+    </div>
 
 </section>
 
