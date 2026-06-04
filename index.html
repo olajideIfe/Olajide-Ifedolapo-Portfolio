@@ -261,9 +261,19 @@ My goal is to grow into a full-stack developer while building impactful software
   </div>
 </div>
 
- 
-
    <!-- Project 4 -->
+<div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('meal app')">
+  <img src="./images/meal-app.png" alt="Plant Care Tracker" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+  <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
+    <h3 class="text-xl font-bold mb-2">Meal App</h3>
+    <p class="text-sm mb-3">A React application that fetches and displays meal data from an external API using Axios and useEffect. Users can browse meals dynamically while demonstrating API integration, asynchronous data fetching, and React state management.
+</p>
+    <p class="mb-4">
+  Tech Stack:
+  React, JavaScript, Axios, TheMealDB API, Tailwind CSS, 
+</p>
+  </div>
+</div>
 
    <!-- Project 5 -->
 <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('shopping')">
@@ -505,6 +515,24 @@ HTML, CSS
         Code
       </a>
           <a href="https://money-flow-mocha.vercel.app/" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Live</a>
+        </div>
+      </div>
+    </div>
+
+    
+        <!-- Meal App -->
+    <div id="modal-meal app" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
+      <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black overflow-y-auto">
+        <button onclick="closeModal('meal app')" class="absolute top-2 right-2 text-black font-bold text-xl">X</button>
+        <h2 class="text-2xl font-bold mb-4">Meal App</h2>
+        <p class="mb-4">A React application that fetches and displays meal data from an external API using Axios and useEffect. Users can browse meals dynamically while demonstrating API integration, asynchronous data fetching, and React state management.</p>
+        <img src="./images/meal-app.png" class="w-full rounded mb-4">
+        <div class="flex gap-4">
+       <a href="https://github.com/olajideIfe/meal-app" target="_blank"
+        class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">
+        Code
+      </a>
+          <a href="https://meal-app-iota-bice.vercel.app/" target="_blank" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">Live</a>
         </div>
       </div>
     </div>
