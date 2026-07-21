@@ -275,7 +275,21 @@ My goal is to grow into a full-stack developer while building impactful software
   </div>
 </div>
 
-   <!-- Project 5 -->
+ <!-- Project 5-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('calculator')">
+          <img src="./images/utility-calculator-suite-home.png" alt="Utility Calculator Suite" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+  
+        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
+       <h3 class="text-xl font-bold mb-2">Utility Calculator Suite</h3>
+       <p class="text-sm mb-3">A responsive utility calculator suite featuring standard, BMI, age, and tip calculators.</p>
+       <p class="mb-4">
+  Tech Stack:
+  React, JavaScript, Tailwind CSS
+</p>
+     </div>
+     </div>
+
+   <!-- Project 6 -->
 <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('shopping')">
   <img src="./images/shopping-list-app.png" alt="Shopping List App" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
   <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
@@ -289,7 +303,7 @@ My goal is to grow into a full-stack developer while building impactful software
   </div>
 </div>
 
-  <!-- Project 6 -->
+  <!-- Project 7 -->
 <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('todo')">
   <img src="./images/to-do-app.png" alt="To Do App" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
 
@@ -305,7 +319,7 @@ My goal is to grow into a full-stack developer while building impactful software
   </div>
 </div>
 
-  <!-- Project 7 -->
+  <!-- Project 8 -->
          <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('grading')">
   <img src="./images/grading-sheet.png" alt="Grading System" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
   
@@ -318,20 +332,6 @@ My goal is to grow into a full-stack developer while building impactful software
 </p>
   </div>
 </div>
-
- <!-- Project 8-->
-        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('counter')">
-          <img src="./images/counter-app.png" alt="Counter App" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-  
-        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-6">
-       <h3 class="text-xl font-bold mb-2">Counter App</h3>
-       <p class="text-sm mb-3">Interactive counter with increment, decrement, and reset functionality.</p>
-       <p class="mb-4">
-  Tech Stack:
-  React, JavaScript, CSS
-</p>
-     </div>
-     </div>
 
   <!-- Project 9 -->
         <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer" onclick="openModal('landing')">
@@ -395,21 +395,20 @@ HTML, CSS
   </div>
 </div>
 
-<!-- Counter app Modal -->
-    <div id="modal-counter" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
+<!-- Utility Calculator Suite Modal -->
+    <div id="modal-calculator" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50 p-6 overflow-y-auto">
   <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative text-black overflow-y-auto">
-    <button onclick="closeModal('counter')" class="absolute top-2 right-2 font-bold text-xl">X</button>
-    <h2 class="text-2xl font-bold mb-4">Counter App</h2>
-    <p class="mb-4">
-      A simple and interactive counter application built with JavaScript, allowing users to increase, decrease, and reset values dynamically.
+    <button onclick="closeModal('calculator')" class="absolute top-2 right-2 font-bold text-xl">X</button>
+    <h2 class="text-2xl font-bold mb-4">Utility Calculator Suite</h2>
+    <p class="mb-4">A responsive utility calculator suite built with React and Tailwind CSS, featuring standard, BMI, age, and tip calculators.
     </p>
-    <img src="./images/counter-app.png" class="w-full rounded mb-4">
+    <img src="./images/utility-calculator-suite-home.png" class="w-full rounded mb-4">
     <div class="flex gap-4">
-      <a href="https://github.com/olajideIfe/Counter-App" target="_blank"
+      <a href="https://github.com/olajideIfe/utility-calculator-suite" target="_blank"
         class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black hover:scale-110 transition duration-300">
         Code
       </a>
-      <a href="https://counter-app-first.vercel.app/" target="_blank"
+      <a href="https://utility-calculator-suite.vercel.app/" target="_blank"
         class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black
         hover:scale-110 transition duration-300">
         Live
